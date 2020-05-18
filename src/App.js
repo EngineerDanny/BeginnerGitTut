@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 //import { Button } from '@material-ui/core'
 import SignInPage from './SignInPage'
-import CustomNavBar from './CustomNavBar'
+import ResponsiveDrawer from './navbars/ResponsiveD'
+
 
 class App extends Component {
   state = {
@@ -24,7 +25,8 @@ class App extends Component {
       // <div className="App">
       //   <SignInPage />
       // </div>
-      <CustomNavBar/>
+      <ResponsiveDrawer/>
+
 
     )
   }
