@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    todo: [
+      'I will learn core react',
+      'I wil play guitar today',
+      'I will watch movies',
+      'We will go to church'
+    ]
+  }
+
+   divIsClicked() {
+    console.log('you have clicked me hoss');
+    
+  }
+
+
+  render() {
+    return (
+      <div className="App">
+        <h1>Danny is awesome</h1>
+        <h2>He is the best programmer I have ever seen</h2>
+        <div onClick = 'divIsClicked'>{this.state.todo}</div>
+        <button onClick='divIsClicked'>Press Me Yahoo!</button>
+        <form action="onSubmit">Hey Now Brown Cow</form>
+         <section>We will watch football</section>
+      </div>
+
+    )
+  }
 }
 
-export default App;
+export default App
+
+
