@@ -17,6 +17,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import ImageStepper from '../steppers/ImageSteppers';
+import { HomeRounded, Map, NavigationRounded, CreditCardRounded, SettingsRounded, ExitToAppRounded, HelpRounded, DeveloperModeRounded, ShareRounded } from '@material-ui/icons';
+
+
 
 const drawerWidth = 240;
 
@@ -67,22 +70,47 @@ function ResponsiveDrawer(props) {
     <div>
       <div className={classes.toolbar} />
       <Divider />
+
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+
+        <ListItem button key='Home'>
+          <ListItemIcon><HomeRounded /></ListItemIcon>
+          <ListItemText primary='Home' />
+        </ListItem>
+
+        <ListItem button key='Map'>
+          <ListItemIcon><NavigationRounded /></ListItemIcon>
+          <ListItemText primary='Map' />
+        </ListItem>
+        <ListItem button key='Orders'>
+          <ListItemIcon><CreditCardRounded /></ListItemIcon>
+          <ListItemText primary='Orders' />
+        </ListItem>
+        <ListItem button key='Settings'>
+          <ListItemIcon><SettingsRounded /></ListItemIcon>
+          <ListItemText primary='Settings' />
+        </ListItem>
+        <ListItem button key='out'>
+          <ListItemIcon><ExitToAppRounded /></ListItemIcon>
+          <ListItemText primary='Sign out' />
+        </ListItem>
+
       </List>
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        <ListItem button key='Help'>
+          <ListItemIcon><HelpRounded /></ListItemIcon>
+          <ListItemText primary='Help and Feedback' />
+        </ListItem>
+        <ListItem button key='Contact'>
+          <ListItemIcon><DeveloperModeRounded /></ListItemIcon>
+          <ListItemText primary='Contact Developer' />
+        </ListItem>
+        <ListItem button key='Share'>
+          <ListItemIcon><ShareRounded /></ListItemIcon>
+          <ListItemText primary='Share' />
+        </ListItem>
+
       </List>
     </div>
   );
@@ -141,7 +169,8 @@ function ResponsiveDrawer(props) {
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-         <ImageStepper/>
+        <ImageStepper />
+      
       </main>
     </div>
   );

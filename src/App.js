@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 //import { Button } from '@material-ui/core'
 import SignInPage from './SignInPage'
 import ResponsiveDrawer from './navbars/ResponsiveD'
+import CustomNavBar from './navbars/CustomNavBar'
 
 
 class App extends Component {
@@ -25,7 +26,7 @@ class App extends Component {
       // <div className="App">
       //   <SignInPage />
       // </div>
-      <ResponsiveDrawer/>
+      <CustomNavBar />
 
 
     )
