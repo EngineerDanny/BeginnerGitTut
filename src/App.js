@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button } from '@material-ui/core'
+import SignInPage from './SignInPage'
 
 class App extends Component {
   state = {
@@ -26,7 +27,7 @@ class App extends Component {
         <button type="submit">Click me Hosses</button>
         <div onClick='divIsClicked'>{this.state.todo}</div>
         <Button color="primary">Hello World</Button>
-
+        <SignInPage />
         <form action="onSubmit">Hey Now Brown Cow</form>
         <section>We will watch football</section>
       </div>
