@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button } from '@material-ui/core'
 
 class App extends Component {
   state = {
@@ -10,9 +11,9 @@ class App extends Component {
     ]
   }
 
-   divIsClicked() {
+  divIsClicked() {
     console.log('you have clicked me hoss');
-    
+
   }
 
 
@@ -23,10 +24,11 @@ class App extends Component {
         <h2>He is the best programmer I have ever seen</h2>
         <h3>React is my favorite web framework</h3>
         <button type="submit">Click me Hosses</button>
-        <div onClick = 'divIsClicked'>{this.state.todo}</div>
-        <button onClick='divIsClicked'>Press Me Yahoo!</button>
+        <div onClick='divIsClicked'>{this.state.todo}</div>
+        <Button color="primary">Hello World</Button>
+
         <form action="onSubmit">Hey Now Brown Cow</form>
-         <section>We will watch football</section>
+        <section>We will watch football</section>
       </div>
 
     )
