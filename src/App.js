@@ -22,6 +22,7 @@ class App extends Component {
         <h1>Danny is awesome</h1>
         <h2>He is the best programmer I have ever seen</h2>
         <h3>React is my favorite web framework</h3>
+        <button type="submit">Click me Hosses</button>
         <div onClick = 'divIsClicked'>{this.state.todo}</div>
         <button onClick='divIsClicked'>Press Me Yahoo!</button>
         <form action="onSubmit">Hey Now Brown Cow</form>
