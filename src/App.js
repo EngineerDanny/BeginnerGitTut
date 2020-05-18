@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 //import { Button } from '@material-ui/core'
 import SignInPage from './SignInPage'
+import CustomNavBar from './CustomNavBar'
 
 class App extends Component {
   state = {
@@ -20,9 +21,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <SignInPage />
-      </div>
+      // <div className="App">
+      //   <SignInPage />
+      // </div>
+      <CustomNavBar/>
 
     )
   }
