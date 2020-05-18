@@ -10,7 +10,8 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
+//import Container from '@material-ui/core/Container';
+import { Card } from '@material-ui/core';
 
 function Copyright() {
     return (
@@ -26,6 +27,9 @@ function Copyright() {
 }
 
 const useStyles = makeStyles((theme) => ({
+    root: {
+        display: 'flex',
+      },
     paper: {
         marginTop: theme.spacing(8),
         display: 'flex',
@@ -49,11 +53,12 @@ export default function SignIn() {
     const classes = useStyles();
 
     return (
-        <Container component="main" maxWidth="xs">
+
+        <Card  className={classes.root} >
             <CssBaseline />
             <div className={classes.paper}>
                 <Avatar className={classes.avatar}>
-             
+
                 </Avatar>
                 <Typography component="h1" variant="h5">
                     Sign in
@@ -111,6 +116,6 @@ export default function SignIn() {
             <Box mt={8}>
                 <Copyright />
             </Box>
-        </Container>
+        </Card>
     );
 }
