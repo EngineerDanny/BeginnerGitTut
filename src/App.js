@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import SignInPage from './SignInPage'
 import ResponsiveDrawer from './navbars/ResponsiveD'
 import CustomNavBar from './navbars/CustomNavBar'
+import FormDialog from './dialogs/ConcernDialog'
 
 
 class App extends Component {
@@ -23,10 +24,11 @@ class App extends Component {
 
   render() {
     return (
-      // <div className="App">
-      //   <SignInPage />
-      // </div>
-      <CustomNavBar />
+      // <SignInPage />
+      <div className="App">
+        <CustomNavBar />
+        <FormDialog />
+      </div>
 
 
     )
